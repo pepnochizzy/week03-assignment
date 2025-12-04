@@ -95,8 +95,9 @@ function upgradeContainer(upgradeData) {
     container.appendChild(title);
     container.appendChild(cost);
     container.appendChild(increase);
+    // container.addEventListener("click", upgradePurchase);
   }
-  container.addEventListener("click", upgradePurchase(cost, increase)); //TODO: check with manny/bertie, how to get info to eventHandler and only for each button (currently takes away all upgrade costs and increases), I know it doesn't belong in this function as this is why it adds all up (I had it in the for loop). Does it belong in createUpgrades?? should I use container.name??
+  container.addEventListener("click", upgradePurchase); //TODO: check with manny/bertie, how to get info to eventHandler and only for each button (currently takes away all upgrade costs and increases), I know it doesn't belong in this function as this is why it adds all up (I had it in the for loop). Does it belong in createUpgrades?? should I use container.name??
 }
 // after you complete this task, you should see the upgrades in your shop-container :D
 
@@ -106,13 +107,13 @@ function upgradeContainer(upgradeData) {
 //- subtract cost of upgrade from totalSnailCount
 //- add increase value to sps (value is in API)
 //- save new values in local storage
-function upgradePurchase(cost, increase) {
+function upgradePurchase() {
   console.log("click");
-  totalSnailCount -= cost.textContent;
-  sps += increase.textContent;
-  save();
+  console.log();
+  // totalSnailCount -= cost.textContent; //this cannot work as cost is in local scope.
+  // sps += increase.textContent;
+  // save;
 }
-
 //================================================================================================================================
 
 //the interval

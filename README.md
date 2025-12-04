@@ -20,3 +20,9 @@ A clicker game
 - 🎯 Use local storage to save and restore the cookie count and relevant game information.
 - 🎯 Use setInterval to increment the cookie count and manage the game state each second.
 - 🎯Managing the game state includes saving progress and updating the DOM.
+
+# Reflection
+
+# Things I found difficult:
+
+- when making the container for shop upgrades, I wanted to make the whole div a button. I knew that the eventHandler would need to update totalSnailCount and sps by the cost and the increase provided by the API, however, I knew that these variables/values were declared inside a function AND inside a for loop. What ended up happening is that if I assigned the containers as eventListeners inside the loop, I could not give the handler arguments as it would call the handler each iteration. If I did not give the handler arguments, I do not know how to get the information into the eventHandler and it felt wrong to also have the handler inside the upgradeContainer(). I also tried putting the eventlistener outside of the for loop but within upgradeContainer() but it did not work as intended either. Perhaps I could declare the handler inside the listener? This is another issue with scope, although I felt much more confident with scope throughout the rest of this assignment and so I do feel I am progressing. This was a scope issue with added complexity of for loops and wanting wet code.
