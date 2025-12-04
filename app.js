@@ -14,7 +14,7 @@ console.log(`Hello World!`);
 //=================================================================================================================================
 
 //data storage
-let totalSnailCount = 0;
+let totalSnailCount = 10000;
 let sps = 0; //snails per second, of course.
 
 // let stats = {
@@ -95,10 +95,9 @@ function upgradeContainer(upgradeData) {
     container.appendChild(title);
     container.appendChild(cost);
     container.appendChild(increase);
-    container.addEventListener("click", upgradePurchase);
   }
+  container.addEventListener("click", upgradePurchase(cost, increase)); //TODO: check with manny/bertie, how to get info to eventHandler and only for each button (currently takes away all upgrade costs and increases), I know it doesn't belong in this function as this is why it adds all up (I had it in the for loop). Does it belong in createUpgrades?? should I use container.name??
 }
-
 // after you complete this task, you should see the upgrades in your shop-container :D
 
 //TODO: create function(s) to HANDLE the purchase action
@@ -107,9 +106,10 @@ function upgradeContainer(upgradeData) {
 //- subtract cost of upgrade from totalSnailCount
 //- add increase value to sps (value is in API)
 //- save new values in local storage
-function upgradePurchase() {
-  totalSnailCount -= cost;
-  sps += increase;
+function upgradePurchase(cost, increase) {
+  console.log("click");
+  totalSnailCount -= cost.textContent;
+  sps += increase.textContent;
   save();
 }
 

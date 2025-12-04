@@ -4,3 +4,13 @@
 body {
   background-color: peru;
 }
+
+.upgradeDiv {
+  padding: 10px;
+  border: 2px solid black;
+  width: fit-content;
+}
+
+.upgradeDiv:hover {
+  cursor: pointer;
+}
