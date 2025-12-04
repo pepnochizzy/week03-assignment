@@ -36,3 +36,18 @@ let sps = 0; //snails per second, of course.
 //- append it to DOM
 
 // after you complete this tast, you should see the upgrades in your shop-container :D
+
+//TODO: create function(s) to HANDLE the purchase action
+//the user needs a button to buy an item
+//when the user clicks the button:
+//- subtract cost of upgrade from totalSnailCount
+//- add increase value to sps (value is in API)
+
+//================================================================================================================================
+
+//the interval
+setInterval(function () {
+  totalSnailCount += sps; //totalSnailCount = tsc + sps
+  //update DOM to reflect changes in the values
+  //save the values in local storage
+}, 1000);
