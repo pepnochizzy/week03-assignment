@@ -42,6 +42,7 @@ let sps = 0; //snails per second, of course.
 //when the user clicks the button:
 //- subtract cost of upgrade from totalSnailCount
 //- add increase value to sps (value is in API)
+//- save new values in local storage
 
 //================================================================================================================================
 
