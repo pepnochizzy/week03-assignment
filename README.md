@@ -28,6 +28,7 @@ A clicker game
 
 # Resources
 
+- https://www.youtube.com/watch?v=PMGCOVfK-8s&list=PL4-IK0AVhVjP5iRPyoF1pKwX-7sEOwty4 For snail animation
 - https://www.youtube.com/watch?v=ypstT5UfCsk For border-image
 - https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-image_generator for border-image
 
