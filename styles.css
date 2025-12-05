@@ -1,51 +1,87 @@
 /* this is a more comprehensive style reset */
 @import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
 
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+}
+
 body {
   background-color: rgb(211, 150, 89);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-
+  grid-template-rows: 1fr;
   font-family: "Exo 2", sans-serif;
   font-weight: 600;
   font-size: 1.5rem;
+  height: 100vh;
+}
+
+#upgrade-container,
+#snailContainer,
+#shop-container {
   height: 100%;
 }
 
+#upgrade-container,
+#shop-container {
+  overflow-y: auto;
+}
+
 h1 {
-  grid-row: 1;
   font-family: "Lobster", sans-serif;
   justify-self: center;
   font-size: 10vh;
   margin: 0;
   color: rgb(66, 39, 12);
-  text-shadow: 5px 10px rgb(219, 139, 48);
+  text-shadow: 5px 10px rgb(173, 98, 13);
+  text-wrap: nowrap;
 }
 
 h2 {
   font-family: "Lobster", sans-serif;
-  font-size: 2rem;
-  color: rgb(236, 168, 90);
-  background: radial-gradient(
-    circle,
-    rgba(60, 32, 18, 0.8) 40%,
-    rgba(108, 107, 106, 0.4) 80%
-  );
+  font-size: 6vh;
+  color: rgb(66, 39, 12);
   display: inline-block;
-  padding: 5px 15px;
   border-radius: 5px;
   justify-self: center;
+  margin: 0;
 }
 
 .upgradeDiv {
-  padding: 10px;
-  border: 2px solid rgb(66, 39, 12);
+  border: none;
+  border-block-start: 4px solid;
+  border-image-source: url("images/bark.jpg");
+  border-image-slice: 100 52 78 30;
   font-family: "Exo 2", sans-serif;
   font-weight: 600;
-  font-size: 0.8rem;
+  font-size: 1.5rem;
   color: rgb(66, 39, 12);
   background-color: rgb(211, 150, 89);
   border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.upgradeTitle {
+  grid-column: 1;
+  align-self: center;
+}
+
+.upgradeCost {
+  grid-column: 2;
+  align-self: center;
+}
+
+.upgradeIncrease {
+  grid-column: 3;
+  align-self: center;
 }
 
 .upgradeDiv:hover {
@@ -57,6 +93,25 @@ h2 {
 #snailImg {
   background-color: rgb(211, 150, 89);
   border: none;
+  padding-top: 10vh;
+}
+
+#snailImg:hover {
+  cursor: pointer;
+}
+
+#snailImg:active {
+  animation: press 100ms;
+}
+
+@keyframes press {
+  0% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+    bottom: 0;
+  }
 }
 
 .snailText {
@@ -72,7 +127,7 @@ h2 {
 }
 
 .snailContainer {
-  grid-column: 1;
+  grid-column: 2;
   justify-self: center;
   align-self: center;
 }
@@ -82,27 +137,27 @@ h2 {
   font-size: 1.5rem;
   color: rgb(66, 39, 12);
   height: 100vh;
-  grid-column: 2;
+  grid-column: 1;
   display: grid;
   grid-template-rows: auto;
   gap: 5px;
-  border: 10px solid;
   padding: 2px;
+  border: 10px solid;
   border-image-source: url("images/bark.jpg");
   border-image-slice: 100 52 78 30;
   background-color: rgb(211, 150, 89);
 }
 #upgrade-container p {
   padding-left: 2vw;
+  padding-top: 0.5vh;
 }
 #shop-container {
   height: 100vh;
   grid-column: 3;
   display: grid;
   grid-template-rows: auto;
-  gap: 5px;
   border: 10px solid;
   padding: 2px;
   border-image-source: url("images/bark.jpg");
-  border-image-slice: 90 40 78 30 fill;
+  border-image-slice: 90 40 78 30;
 }

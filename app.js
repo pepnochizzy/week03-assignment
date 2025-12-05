@@ -122,9 +122,9 @@ function upgradeContainer(upgradeData) {
 
 function createPurchasedContainer() {
   const upgradeContainer = document.getElementById("upgrade-container");
-  const h1 = upgradeContainer.querySelector("h1");
+  const h2 = upgradeContainer.querySelector("h2");
   upgradeContainer.innerHTML = ""; //reset because I am calling this in the initialising AND when a purchase happens, this prevents it from creating 10 originally and then 20 etc
-  if (h1) upgradeContainer.appendChild(h1);
+  if (h2) upgradeContainer.appendChild(h2);
   for (let key in upgradeTotals) {
     //loops for each name in upgradeTotals object
     const container = document.createElement("div");
