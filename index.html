@@ -6,21 +6,40 @@
     <title>Clicker Game</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="app.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <h1>Snail Army</h1>
-    <button id="snailImg">
-      <img
-        src="https://ichef.bbci.co.uk/ace/standard/1800/cpsprodpb/4c33/live/204f2680-913f-11ef-b8b4-3587d39b434a.jpg"
-        alt="Snail button, click to generate snails"
-      />
-    </button>
-    <!-- a clickable element for example an img -->
-    <img src="" alt="" />
     <!-- game info -->
-    <p>Total snail count: <span id="totalSnailCount">0</span></p>
-    <p>Snails per second (sps): <span id="spsText">0</span></p>
-    <!-- container for shop upgrades -->
-    <section id="shop-container"></section>
+    <section class="snailContainer">
+      <button id="snailImg">
+        <img
+          src="images/Snail.png.png"
+          alt="Snail button, click to generate snails"
+        />
+      </button>
+      <p>Total snail count: <span id="totalSnailCount">0</span></p>
+      <p>Snails per second (sps): <span id="spsText">0</span></p>
+    </section>
+
+    <section id="upgrade-container">
+      <!-- container for purchased upgrades -->
+    </section>
+
+    <section id="shop-container">
+      <h2>Shop</h2>
+      <!-- container for shop upgrades -->
+    </section>
   </body>
 </html>

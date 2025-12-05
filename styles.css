@@ -3,14 +3,55 @@
 
 body {
   background-color: peru;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2px;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 400;
+}
+
+h1 {
+  grid-column: 2;
+  font-family: "Lobster", sans-serif;
+}
+
+h2 {
+  font-family: "Lobster", sans-serif;
 }
 
 .upgradeDiv {
   padding: 10px;
   border: 2px solid black;
-  width: fit-content;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 400;
 }
 
 .upgradeDiv:hover {
   cursor: pointer;
+}
+
+#snailImg {
+  background-color: peru;
+}
+
+.purchased-upgrade {
+  border: 2px solid black;
+}
+
+.snailContainer {
+  grid-column: 1;
+}
+
+#upgrade-container {
+  grid-column: 2;
+  display: grid;
+  grid-template-rows: auto;
+  gap: 5px;
+}
+
+#shop-container {
+  grid-column: 3;
+  display: grid;
+  grid-template-rows: auto;
+  gap: 5px;
 }

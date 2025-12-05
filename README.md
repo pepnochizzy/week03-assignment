@@ -2,6 +2,11 @@
 
 A clicker game
 
+# Game notes
+
+- Click the snail to gain more snails!
+- The game will autosave every second, so no worries about manual saving.
+
 # User Stories
 
 - 🐿️ As a developer, I want to retrieve upgrade information from an API so that all the developers working on the game can access a single, consistent source of up-to-date information.
@@ -14,12 +19,17 @@ A clicker game
 
 # Requirements
 
-- 🎯 Fetch upgrade data from the provided API and at least one upgrade from the API update the cookie count.
+- 🎯 Fetch upgrade data from the provided API and at least one upgrade from the API update the cookie count. ✅
 - 🎯 Ensure that functions are used effectively to keep code organised and reusable.
-- 🎯 Implement event listeners to handle user interactions.
-- 🎯 Use local storage to save and restore the cookie count and relevant game information.
-- 🎯 Use setInterval to increment the cookie count and manage the game state each second.
-- 🎯Managing the game state includes saving progress and updating the DOM.
+- 🎯 Implement event listeners to handle user interactions. ✅
+- 🎯 Use local storage to save and restore the cookie count and relevant game information. ✅ TODO: log upgrades bought to storage (maybe calc sps from upgrades purchased?)
+- 🎯 Use setInterval to increment the cookie count and manage the game state each second. ✅
+- 🎯Managing the game state includes saving progress and updating the DOM. ✅
+
+# Resources
+
+- https://www.youtube.com/watch?v=ypstT5UfCsk For border-image
+- https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-image_generator for border-image
 
 # Reflection
 
